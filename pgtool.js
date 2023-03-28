@@ -4177,7 +4177,7 @@ function PGTOOL() {
                                     .filter(data => data[0].substring(0,1) !== '_')
                                     .map(
                                     function(data) {
-                                        return { answer_name: data[1].crop_name, answer_code: data[0] }
+                                        return { answer_name: data[1].crop_name, answer_code: data[0], answer_unit: data[1].units, answer_sales_unit: data[1].sales_units }
                                     }
                                 )
                             },
@@ -5271,7 +5271,9 @@ function PGTOOL() {
                                     function(data) {
                                         return {
                                             answer_name: data[1].livestock_name,
-                                            answer_code: data[0]
+                                            answer_code: data[0],
+                                            answer_unit: data[1].units,
+                                            answer_sales_unit: data[1].sales_units 
                                         }
                                     }
                                 )
@@ -5361,7 +5363,9 @@ function PGTOOL() {
                                     function(data) {
                                         return {
                                             answer_name: data[1].livestock_product_name,
-                                            answer_code: data[0]
+                                            answer_code: data[0],
+                                            answer_unit: data[1].units,
+                                            answer_sales_unit: data[1].sales_units 
                                         }
                                     }
                                 )
@@ -8786,7 +8790,8 @@ function PGTOOL() {
                                     .map(function(data) {
                                     return {
                                         answer_name: data[1].fuel_name + " (" + data[1].units + ")",
-                                        answer_code: data[0]
+                                        answer_code: data[0],
+                                        answer_unit: data[1].units
                                     }
                                 })
                             },
@@ -8984,7 +8989,8 @@ function PGTOOL() {
                                     function(data) {
                                         return {
                                             answer_name: data[1].contract_name + " (" + data[1].units + ")",
-                                            answer_code: data[0]
+                                            answer_code: data[0],
+                                            answer_unit: data[1].units
                                         }
                                     }
                                 )
@@ -14736,7 +14742,7 @@ function PGTOOL() {
                             npkbudget_inputsandoutputs_peasnfixation: function() {
                                 var totaln = 0
                                 var crops = get('initialdata_crops_cropname')
-                                if (crops.includes('peas_dry')) {
+                                if (crops && crops.includes('peas_dry')) {
                                     for (var i = 0; i < crops.length; i++) {
                                         var type = crops[i]
                                         if (type !== 'peas_dry') continue;
@@ -14751,7 +14757,7 @@ function PGTOOL() {
                             npkbudget_inputsandoutputs_beansnfixation: function() {
                                 var totaln = 0
                                 var crops = get('initialdata_crops_cropname')
-                                if (crops.includes('field_beans')) {
+                                if (crops && crops.includes('field_beans')) {
                                     for (var i = 0; i < crops.length; i++) {
                                         var type = crops[i]
                                         if (type !== 'field_beans') continue;
