@@ -4072,46 +4072,7 @@ function PGTOOL() {
                                 question_type: QUESTION_TYPE.NUMBER,
                                 answer_limits: { min: 0 },
                                 answer_unit: "months",
-                            },
-                            initialdata_farminfo_agrienvscheme: {
-                                question_name: "What is the level of agri-environmental participation?",
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: "Cross compliance", answer_code: 0 },
-                                    { answer_name: "OELS or ELS", answer_code: 1 },
-                                    { answer_name: "OELS/ELS/HLS or ESA or countryside stewardship", answer_code: 2 }
-                                ]
-                            },
-                            initialdata_farminfo_region: {
-                                question_name: "Region",
-                                helper: {
-                                    html: false,
-                                    content: "For FBS purposes"
-                                },
-                                compulsory: true,
-                                question_type: QUESTION_TYPE.DROPDOWN,
-                                answer_list: [
-                                    { answer_name: "North", answer_code: 0 },
-                                    { answer_name: "East", answer_code: 1 },
-                                    { answer_name: "West", answer_code: 2 }
-                                ]
-                            },
-                            initialdata_farminfo_lessfavouredarea: {
-                                question_name: "Is more than 50% of your land in a less favoured area (LFA)?",
-                                compulsory: true,
-                                question_type: QUESTION_TYPE.BOOLEAN,
-                                answer_list: [
-                                    { answer_name: "No", answer_code: 0 },
-                                    { answer_name: "Yes", answer_code: 1 }
-                                ]
-                            },
-                            initialdata_farminfo_fbsclassification: {
-                                question_name: "FBS classification",
-                                compulsory: false,
-                                question_type: QUESTION_TYPE.TEXT,
-                                auto_calc: true,
-                                precedents: [],
-                            },
+                            }
                         }
                     },
                     initialdata_crops: {
