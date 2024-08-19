@@ -13874,7 +13874,8 @@ function PGTOOL() {
                                     1: 4,
                                     2: 3,
                                     3: 2,
-                                    4: 1
+                                    4: 1,
+                                    5: 1,
                                 }
                                 return scores[acode]
                             },
