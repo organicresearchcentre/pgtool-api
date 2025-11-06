@@ -9,7 +9,7 @@ For developers there is further infromation about the design and future developm
 
 If you are looking for a running example of the PG Tool with a web interface then please check the [GUI](https://github.com/organicresearchcentre/pgtool-gui).
 
-For any queries about the PG Tool please contact github@organicresearchcentre.com.
+For any queries about the PG Tool please contact christian.g@organicresearchcentre.com.
 
 ## How to use
 
@@ -21,3 +21,4 @@ Within a .html webpage just import the script in order to use it. There are two 
 - Use a third-party cdn service (like [jsdelivr.com](https://www.jsdelivr.com/)), as in the following example:
 
 `<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/organicresearchcentre/pgtool-api@master/pgtool.js"></script>`
+
